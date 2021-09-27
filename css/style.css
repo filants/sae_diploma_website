@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto Condensed';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('fonts/RobotoCondensed-Italic.eot');
+    src: url('fonts/RobotoCondensed-Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/RobotoCondensed-Italic.woff2') format('woff2'),
+        url('fonts/RobotoCondensed-Italic.woff') format('woff'),
+        url('fonts/RobotoCondensed-Italic.ttf') format('truetype'),
+        url('fonts/RobotoCondensed-Italic.svg#RobotoCondensed-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('fonts/RobotoCondensed-Light.eot');
+    src: url('fonts/RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/RobotoCondensed-Light.woff2') format('woff2'),
+        url('fonts/RobotoCondensed-Light.woff') format('woff'),
+        url('fonts/RobotoCondensed-Light.ttf') format('truetype'),
+        url('fonts/RobotoCondensed-Light.svg#RobotoCondensed-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('fonts/RobotoCondensed-BoldItalic.eot');
+    src: url('fonts/RobotoCondensed-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/RobotoCondensed-BoldItalic.woff2') format('woff2'),
+        url('fonts/RobotoCondensed-BoldItalic.woff') format('woff'),
+        url('fonts/RobotoCondensed-BoldItalic.ttf') format('truetype'),
+        url('fonts/RobotoCondensed-BoldItalic.svg#RobotoCondensed-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('fonts/RobotoCondensed-Bold.eot');
+    src: url('fonts/RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+        url('fonts/RobotoCondensed-Bold.woff') format('woff'),
+        url('fonts/RobotoCondensed-Bold.ttf') format('truetype'),
+        url('fonts/RobotoCondensed-Bold.svg#RobotoCondensed-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('fonts/RobotoCondensed-Regular.eot');
+    src: url('fonts/RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+        url('fonts/RobotoCondensed-Regular.woff') format('woff'),
+        url('fonts/RobotoCondensed-Regular.ttf') format('truetype'),
+        url('fonts/RobotoCondensed-Regular.svg#RobotoCondensed-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('fonts/RobotoCondensed-LightItalic.eot');
+    src: url('fonts/RobotoCondensed-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/RobotoCondensed-LightItalic.woff2') format('woff2'),
+        url('fonts/RobotoCondensed-LightItalic.woff') format('woff'),
+        url('fonts/RobotoCondensed-LightItalic.ttf') format('truetype'),
+        url('fonts/RobotoCondensed-LightItalic.svg#RobotoCondensed-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Antonio';
+    src: url('fonts/Antonio-ExtraLight.eot');
+    src: url('fonts/Antonio-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Antonio-ExtraLight.woff2') format('woff2'),
+        url('fonts/Antonio-ExtraLight.woff') format('woff'),
+        url('fonts/Antonio-ExtraLight.ttf') format('truetype'),
+        url('fonts/Antonio-ExtraLight.svg#Antonio-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Antonio';
+    src: url('fonts/Antonio-Bold.eot');
+    src: url('fonts/Antonio-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Antonio-Bold.woff2') format('woff2'),
+        url('fonts/Antonio-Bold.woff') format('woff'),
+        url('fonts/Antonio-Bold.ttf') format('truetype'),
+        url('fonts/Antonio-Bold.svg#Antonio-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Antonio';
+    src: url('fonts/Antonio-Light.eot');
+    src: url('fonts/Antonio-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Antonio-Light.woff2') format('woff2'),
+        url('fonts/Antonio-Light.woff') format('woff'),
+        url('fonts/Antonio-Light.ttf') format('truetype'),
+        url('fonts/Antonio-Light.svg#Antonio-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Antonio';
+    src: url('fonts/Antonio-Medium.eot');
+    src: url('fonts/Antonio-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Antonio-Medium.woff2') format('woff2'),
+        url('fonts/Antonio-Medium.woff') format('woff'),
+        url('fonts/Antonio-Medium.ttf') format('truetype'),
+        url('fonts/Antonio-Medium.svg#Antonio-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Antonio';
+    src: url('fonts/Antonio-SemiBold.eot');
+    src: url('fonts/Antonio-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Antonio-SemiBold.woff2') format('woff2'),
+        url('fonts/Antonio-SemiBold.woff') format('woff'),
+        url('fonts/Antonio-SemiBold.ttf') format('truetype'),
+        url('fonts/Antonio-SemiBold.svg#Antonio-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Antonio';
+    src: url('fonts/Antonio-Regular.eot');
+    src: url('fonts/Antonio-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Antonio-Regular.woff2') format('woff2'),
+        url('fonts/Antonio-Regular.woff') format('woff'),
+        url('fonts/Antonio-Regular.ttf') format('truetype'),
+        url('fonts/Antonio-Regular.svg#Antonio-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Antonio';
+    src: url('fonts/Antonio-Thin.eot');
+    src: url('fonts/Antonio-Thin.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Antonio-Thin.woff2') format('woff2'),
+        url('fonts/Antonio-Thin.woff') format('woff'),
+        url('fonts/Antonio-Thin.ttf') format('truetype'),
+        url('fonts/Antonio-Thin.svg#Antonio-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+/* NAVIGATION */
+
+.logo {
+    width: 15rem;
+}
+
+.content_container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1800px) {
+    .content_container {
+        width: 70%;
+    }
+  }
+
+.navigation {
+    margin:2rem auto 2rem auto;
+    list-style: none;
+    display: flex;
+}
+
+.navigation li {
+    padding: 0 1rem 0 0;
+    height: 1.5rem;
+    text-transform: uppercase;
+}
+
+.navigation li a {
+    font-family: 'antonio';
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.navigation li a:hover {
+    color: #FF7E7E;
+}
+
+.nav_active {
+    color: #FF7E7E !important;
+}
+
+.navigation li a img {
+    height: 1.7rem;
+}
+
+#konto_icon {
+    background-image: url(../images/icons/konto_icon.svg);
+    background-repeat: no-repeat;
+}
+    
+#konto_icon:hover {
+    background-image: url(../images/icons/konto_icon_hover.svg);
+    background-repeat: no-repeat;
+}
+
+#konto_icon_active {
+    background-image: url(../images/icons/konto_icon_hover.svg);
+    background-repeat: no-repeat;
+}
+
+#favoriten_icon {
+    background-image: url(../images/icons/favoriten_icon.svg);
+    background-repeat: no-repeat;
+}
+
+#favoriten_icon:hover {
+    background-image: url(../images/icons/favoriten_icon_hover.svg);
+    background-repeat: no-repeat;
+}
+
+#warenkorb_icon {
+    background-image: url(../images/icons/warenkorb_icon.svg);
+    background-repeat: no-repeat;
+    
+}
+
+#warenkorb_icon:hover {
+    background-image: url(../images/icons/warenkorb_icon_hover.svg);
+    background-repeat: no-repeat;
+
+}
+
+#warenkorb_icon_active {
+    background-image: url(../images/icons/warenkorb_icon_hover.svg);
+    background-repeat: no-repeat;
+
+}
+
+
+.navigation li:last-child {
+    padding: 0 0 0 0;
+}
+
+#user_bar{
+    margin-left: auto;
+}
+
+#admin_login {
+    margin-left: auto;
+}
+
+
+/* BUTTONS */
+
+
+
+.primary_button {
+    margin: 2rem 0 1rem 0;;
+    background-color: #FF7E7E;
+    color: white;
+    padding: 0.7rem 2rem 0.8rem 2rem;
+    font-family: "antonio";
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.primary_button:hover {
+    transition: 0.1s ease-out;
+    background-color: #7d3c96;
+}
+
+
+.secondary_button {
+    background-color: white;
+    color: black;
+    padding: 0.7rem 2rem 0.8rem 2rem;
+    text-align: center;
+    font-family: "antonio";
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    outline: solid #FF7E7E 2px;
+    outline-offset: -2px;
+    border: none;
+    border-radius: 0%;
+    cursor: pointer;
+}
+
+.secondary_button:hover {
+
+    outline: none;
+    color: white;
+    background-color: #7d3c96;
+}
+
+
+.kauf_button {
+    text-transform: uppercase;
+    font-family: "antonio";
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #7d3c96;
+    text-align: right;
+}
+
+.kauf_button:hover {
+    color: #FF7E7E;
+}
+
+.delete_button {
+    text-transform: uppercase;
+    font-family: "antonio";
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #777777;
+}
+
+.delete_button:hover {
+    color: #FF7E7E;
+}
+
+.cart_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart_buttons > a {
+    width: 37%;
+}
+
+.back_button {
+    margin: 2rem 0 1rem 0;;
+    background-color: white;
+    color: black;
+    padding: 0.7rem 2rem 0.8rem 2rem;
+    font-family: "antonio";
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    outline: 2px solid #FF7E7E;
+    cursor: pointer;
+    text-align: center;
+}
+
+.back_button:hover {
+    outline: none;
+    color: white;
+    background-color: #7d3c96;
+}
+
+#user_logout {
+    height: 1.7rem;
+}
+
+
+/* TITLES */
+
+.header_title {
+    display: flex;
+}
+
+.header_title > img {
+    height: 10rem;
+}
+
+/* BANNERS */
+
+.banner > img {
+    width: 100%;;
+}
+
+
+/* ALERT */
+
+.alert {
+    background-color: #FF7E7E;
+    color: white !important;
+    font-style: normal;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+/* FORM */
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 1rem 0 0.5rem 0;
+    font-family: "antonio";
+    text-transform: uppercase;
+    font-weight: 400;
+
+}
+
+.user_form {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    margin: 5rem auto 5rem auto;
+}
+
+label:nth-child(2) {
+    padding-right: 0.5rem;
+}
+
+input[type=text], input[type=password] {
+    border: solid black 1px;
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+    border-radius: 0%;
+    font-size: 1rem;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    border: solid black 1px;
+    outline: solid #ff7e7e 2px;
+    outline-offset: -2px;
+    border-radius: 0%;
+}
+
+.user_form input:last-child {
+    margin-right: 0.3rem;
+}
+
+select {
+    border: solid black 1px;
+    border-radius: 0%;
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+    font-size: 1rem;
+}
+
+select:focus {
+    outline: solid #ff7e7e 2px;
+    outline-offset: -2px;
+
+}
+
+.conditions_box {
+    margin-top: 1rem;
+}
+
+/* PRODUCT GRID */
+
+
+.products_container {
+    margin: 2rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.items {
+    height: auto;
+    width: 31%;
+    margin: 0 0 3rem 0;
+}
+
+.items > img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 0.5rem;
+    background-color: lawngreen;
+}
+
+.product_desc {
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+}
+
+.product_price {
+    color: #FF7E7E;
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.kauf_container{
+    position: relative;
+}
+
+.line {
+    margin: 0.5rem 0 0.5rem 0;
+    background-color: black;
+    width: 100%;
+    height: 1px;
+}
+
+/* CART GRID */
+
+.cart_form {
+    margin: 5rem auto 0 auto;
+    width: 40rem;
+
+
+}
+
+.cart_items {
+    display: flex;
+    flex-direction: row;
+    width: 40rem;
+    margin: 1rem auto 1rem auto;
+
+}
+
+.cart_desc {
+    width: 100%;
+
+}
+
+.cart_img {
+    width: 10rem;
+    margin-right: 2rem;
+}
+
+.cart_qnt {
+    color: black;
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    padding-bottom: 5rem;
+
+}
+
+.cart_product_price {
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    text-align: right;
+
+}
+
+.price_container{
+    position: relative;
+}
+
+.each_price {
+    float: right;
+    color: black;
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    text-align: right;
+}
+
+.cart_product_price{
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #FF7E7E;
+    
+}
+
+.total_price_container {
+    margin: 2rem 0 0 0;
+}
+
+.total_price_container > p {
+    margin: 0.3rem 0 0 0;
+}
+
+.total_price_container > div {
+    margin-bottom: 1rem;
+}
+
+
+.total_price{
+    float: right;
+    right: 0;
+    top: 0;
+    color: #FF7E7E;
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    
+}
+
+/* FOOTER */

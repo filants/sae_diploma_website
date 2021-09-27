@@ -1,0 +1,188 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Jun 22, 2021 at 09:54 PM
+-- Server version: 5.7.32
+-- PHP Version: 7.4.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `limmat_website`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `IDadmin` int(11) NOT NULL,
+  `admin_email` varchar(255) NOT NULL,
+  `admin_password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`IDadmin`, `admin_email`, `admin_password`) VALUES
+(1, 'admin@limmat.ch', '$2y$10$YbF7VszXT9/rQ4.cTOlgVusv6Vq06Z8OWSZCmPSVkhzlejXfOX54i');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `adress`
+--
+
+CREATE TABLE `adress` (
+  `IDadress` int(11) NOT NULL,
+  `adress_street` varchar(255) NOT NULL,
+  `adress_postcode` int(5) NOT NULL,
+  `adress_city` varchar(255) NOT NULL,
+  `adress_country` varchar(255) NOT NULL,
+  `user_IDuser` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `adress`
+--
+
+INSERT INTO `adress` (`IDadress`, `adress_street`, `adress_postcode`, `adress_city`, `adress_country`, `user_IDuser`) VALUES
+(1, 'Zunstrasse', 8152, 'Glattbrugg', 'ch', 10),
+(2, 'Zunstrasse', 8152, 'Glattbrugg', 'ch', 11),
+(3, 'Zunstrasse', 8152, 'Glattbrugg', 'ch', 12),
+(4, 'Zunstrasse', 8152, 'Glattbrugg', 'ch', 13),
+(6, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 15),
+(7, 'Zunstrasse, 18', 8152, 'Glattbrugg', '', 16),
+(8, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 17),
+(9, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 18),
+(10, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 19),
+(11, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 20),
+(12, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 21),
+(13, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 22),
+(14, '\\', 8152, 'Glattbrugg', 'ch', 23),
+(15, 'sdf', 8152, '<script>', 'ch', 24),
+(16, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 25),
+(17, 'Zunstrasse 18', 8152, 'Glattbrugg', 'ch', 26),
+(18, 'Zunstrasse', 8152, 'Glattbrugg', 'ch', 27),
+(19, 'Beispielstrasse', 6666, 'Zürich', 'ch', 28),
+(20, 'Hellstrasse', 6666, 'Zürich', 'de', 29),
+(21, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 30),
+(22, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 31),
+(23, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 32),
+(24, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 33),
+(25, 'Zunstrasse, 18', 8152, 'Glattbrugg', 'ch', 34);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `IDproduct` int(11) NOT NULL,
+  `product_image` varchar(45) NOT NULL,
+  `product_name` varchar(45) NOT NULL,
+  `product_desc` varchar(45) NOT NULL,
+  `product_price` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`IDproduct`, `product_image`, `product_name`, `product_desc`, `product_price`) VALUES
+(1, 'shirt.jpg', 'Brixton', 'CHARTER PRINT', '35'),
+(2, 'jacket.jpg', 'Stanford', 'MASSIAH JACKET', '80'),
+(3, 'glasses.jpg', 'California', 'JACSTEAM SUNGLASSES', '110'),
+(4, 'trousers.jpg', 'London', 'SEASONAL FIT', '40'),
+(5, 'trousers_2.jpg', 'Scotch', 'CLASSIC FELPA', '25'),
+(6, 'hut.jpg', 'Kangol', 'BERMUDA BUCKET', '10'),
+(7, 'jacket_2.jpg', 'Tommy Jeans', 'LIGHTWEIGHT POPOVER', '145'),
+(8, 'shirt_3.jpg', 'Grimey', 'LIVEUTION SHORT', '60'),
+(9, 'pullover.jpg', 'Snils', 'OVERHEAD TAHITI', '115');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `IDuser` int(11) NOT NULL,
+  `user_title` varchar(5) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `user_firstname` varchar(45) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `user_lastname` varchar(45) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `user_birth` varchar(255) DEFAULT NULL,
+  `user_email` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `user_password` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`IDuser`, `user_title`, `user_firstname`, `user_lastname`, `user_birth`, `user_email`, `user_password`) VALUES
+(28, 'herr', 'user', 'example', '01.01.2001', 'user@limmat.ch', '$2y$10$YbF7VszXT9/rQ4.cTOlgVusv6Vq06Z8OWSZCmPSVkhzlejXfOX54i');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`IDadmin`);
+
+--
+-- Indexes for table `adress`
+--
+ALTER TABLE `adress`
+  ADD PRIMARY KEY (`IDadress`),
+  ADD KEY `fk_adress_user1_idx` (`user_IDuser`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`IDproduct`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`IDuser`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `IDadmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `adress`
+--
+ALTER TABLE `adress`
+  MODIFY `IDadress` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `IDproduct` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `IDuser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
