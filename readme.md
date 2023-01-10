@@ -20,12 +20,12 @@ Zugangsdaten zum DB befinden sich unter `includes/config.inc.php`
 
 <br>
 
-*** LOGIN FÜR ÜSER BEREICH *** 
+*** LOGIN FÜR USER BEREICH *** 
 - Username: `user@limmat.ch`
 - Passwort: `Test1234`
 
 <br>
 
-*** LOGIN FÜR ÜSER BEREICH *** 
+*** LOGIN FÜR USER BEREICH *** 
 - Username: `admin@limmat.ch`
 - Passwort: `Test1234`
